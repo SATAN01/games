@@ -15,7 +15,7 @@ print("Guess the characters")
   
 guesses = '' 
   
-turns = 12
+turns = 5
   
   
 while turns > 0: 
@@ -45,14 +45,17 @@ while turns > 0:
       
  
     if guess not in word: 
+        
           
         turns -= 1
            
         print("Wrong") 
           
-         
-        print("You have", + turns, 'more guesses left') 
+        if turns != 0:
+            print("You have", + turns, 'more guesses left') 
           
           
         if turns == 0: 
-            print("You Loose!bettter luck next time")
+            print('The word was : ',word)
+            print("You Loose! bettter luck next time")
+            
